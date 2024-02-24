@@ -1,5 +1,6 @@
-package dev.patika.demo.dto.request;
+package dev.patika.demo.dto.request.category;
 
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -8,7 +9,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CategorySaveRequest {
-    private int id;
+
+    @NotNull(message = "Kategori adı boş veya null olamaz")
     private String categoryName;
     private String categoryDescription;
 }
